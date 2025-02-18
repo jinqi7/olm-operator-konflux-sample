@@ -38,3 +38,8 @@ spec:
   #     - linux/s390x
   pipelineRef:
     name: build-pipeline
+  taskRunTemplate: {}
+  workspaces:
+  - name: git-auth
+    secret:
+      secretName: '{{ git_auth_secret }}'
